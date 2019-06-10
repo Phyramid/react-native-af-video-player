@@ -10,7 +10,7 @@ import {
   Image,
   Alert
 } from 'react-native'
-import Video from 'react-native-video'
+import VideoPlayer from 'react-native-video'
 import KeepAwake from 'react-native-keep-awake'
 import Orientation from 'react-native-orientation'
 import Icons from 'react-native-vector-icons/MaterialIcons'
@@ -382,7 +382,7 @@ class Video extends Component {
           ((loading && placeholder) || currentTime < 0.01) &&
           <Image resizeMode="cover" style={styles.image} {...checkSource(placeholder)} />
         }
-        <Video
+        <VideoPlayer
           {...checkSource(url)}
           paused={paused}
           resizeMode={resizeMode}
